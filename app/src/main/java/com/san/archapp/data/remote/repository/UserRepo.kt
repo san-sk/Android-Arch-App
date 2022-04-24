@@ -27,12 +27,16 @@ class UserRepo @Inject constructor(private val api: BaseApi, private val userDao
         // and then store.
         saveFetchResult = { userList ->
             userList.data?.let { userDao.insertUser(it) }
+        },
+
+        shouldFetch = {
+            it.isEmpty()
         }
 
     )
 
 
-    fun getComment(id:Int) = userDao.getComment(id)
+    fun getComment(id: Int) = userDao.getComment(id)
 
-    suspend fun insertComment(id: Int, comment:String) = userDao.insertComment(id, comment)
+    suspend fun insertComment(id: Int, comment: String) = userDao.insertComment(id, comment)
 }

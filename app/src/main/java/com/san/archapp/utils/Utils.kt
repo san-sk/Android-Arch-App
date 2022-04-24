@@ -1,12 +1,12 @@
 package com.san.archapp.utils
 
+import android.content.ContentResolver
 import android.content.Context
-import android.net.ConnectivityManager
-import android.net.Network
-import android.net.NetworkCapabilities
-import android.net.NetworkRequest
+import android.net.*
 import android.os.Build
+import android.widget.Toast
 import androidx.annotation.RequiresApi
+import java.io.File
 
 
 val networkRequest: NetworkRequest? = NetworkRequest.Builder()
@@ -45,4 +45,13 @@ private fun registerNetworkCallBack(context: Context) {
         connectivityManager.requestNetwork(networkRequest, networkCallback)
     }
 
+}
+
+
+fun getRawUri(context: Context, filename: String): Uri? {
+    return Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE + File.pathSeparator + File.separator + context.packageName.toString() + "/raw/" + filename)
+}
+
+fun Context.showToast(message: String) {
+    Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
 }

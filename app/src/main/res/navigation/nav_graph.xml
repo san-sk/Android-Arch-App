@@ -21,7 +21,7 @@
 
     <fragment
         android:id="@+id/commentFragment"
-        android:name="com.san.archapp.ui.comment.CommentFragment"
+        android:name="com.san.archapp.ui.home.comment.CommentFragment"
         android:label="CommentFragment"
         tools:layout="@layout/fragment_comment">
         <argument
@@ -29,14 +29,22 @@
             app:argType="integer" />
     </fragment>
     <fragment
-        android:id="@+id/accountFragment"
-        android:name="com.san.archapp.ui.account.AccountFragment"
-        android:label="fragment_account"
-        tools:layout="@layout/fragment_account" />
+        android:id="@+id/exampleFragment"
+        android:name="com.san.archapp.ui.examples.ExamplesFragment"
+        android:label="fragment_examples"
+        tools:layout="@layout/fragment_examples" >
+        <action
+            android:id="@+id/action_exampleFragment_to_serviceFragment"
+            app:destination="@id/serviceFragment" />
+    </fragment>
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.san.archapp.ui.settings.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/serviceFragment"
+        android:name="com.san.archapp.ui.examples.service.ServiceFragment"
+        android:label="ServiceFragment" />
 
 </navigation>

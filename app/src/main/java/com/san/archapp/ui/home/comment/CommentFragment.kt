@@ -1,4 +1,4 @@
-package com.san.archapp.ui.comment
+package com.san.archapp.ui.home.comment
 
 import android.os.Bundle
 import android.view.LayoutInflater

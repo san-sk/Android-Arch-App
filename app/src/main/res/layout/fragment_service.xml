@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp">
+
+    <TextView
+        android:id="@+id/tv_title_bg_service"
+        style="@style/HeaderTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="1. Background Service"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/start_bg_service"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="start service"
+        app:layout_constraintEnd_toStartOf="@+id/stop_bg_service"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_bg_service" />
+
+    <Button
+        android:id="@+id/stop_bg_service"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="stop service"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/start_bg_service"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_bg_service" />
+
+    <TextView
+        android:id="@+id/tv_title_fg_service"
+        style="@style/HeaderTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="2. Foreground Service"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stop_bg_service" />
+
+    <Button
+        android:id="@+id/start_fg_service"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="start service"
+        app:layout_constraintEnd_toStartOf="@+id/stop_fg_service"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_fg_service" />
+
+    <Button
+        android:id="@+id/stop_fg_service"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="stop service"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/start_fg_service"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_fg_service" />
+
+    <TextView
+        android:id="@+id/tv_title_bd_service"
+        style="@style/HeaderTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="3. Bound Service"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stop_fg_service" />
+
+    <Button
+        android:id="@+id/start_bd_service"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="start service"
+        app:layout_constraintEnd_toStartOf="@+id/stop_bd_service"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_bd_service" />
+
+    <Button
+        android:id="@+id/stop_bd_service"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="stop service"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/start_bd_service"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_bd_service" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

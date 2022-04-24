@@ -1,4 +1,4 @@
-package com.san.archapp.ui.comment
+package com.san.archapp.ui.home.comment
 
 import androidx.lifecycle.ViewModel
 import com.san.archapp.data.remote.repository.UserRepo

@@ -8,13 +8,11 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.snackbar.Snackbar
 import com.san.archapp.R
-import com.san.archapp.data.remote.utils.Resource
 import com.san.archapp.databinding.FragmentUsersBinding
 import com.san.archapp.ui.adapters.UserListAdapter
-import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
@@ -50,25 +48,14 @@ class HomeFragment : Fragment(R.layout.fragment_users) {
         super.onViewCreated(view, savedInstanceState)
 
         binding.rvUsers.adapter = userListAdapter
-
         fetchUsers()
     }
 
     private fun fetchUsers() {
-        lifecycleScope.launch {
-            viewModel.getUsers().collect {
-                when (it) {
-                    is Resource.Error -> {
-                        showSnackBar(it.error?.message.toString())
-                    }
-                    is Resource.Loading -> {
-                        userListAdapter.submitList(it.data)
-                    }
-                    is Resource.Success -> {
-                        userListAdapter.submitList(it.data)
-                    }
-                }
-            }
+        viewModel.usersLiveData.observe(viewLifecycleOwner) {
+            it?.let {
+                userListAdapter.submitList(it)
+            } ?: kotlin.run { showSnackBar("Users not found") }
         }
     }
 
