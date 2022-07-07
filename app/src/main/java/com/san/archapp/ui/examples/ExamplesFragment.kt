@@ -34,12 +34,13 @@ class ExamplesFragment : Fragment(R.layout.fragment_examples) {
         super.onViewCreated(view, savedInstanceState)
 
         binding.rvList.adapter = listAdapter
-        listAdapter.submitList(listOf(CommonItem(0, "Service")))
+        listAdapter.submitList(listOf(CommonItem(0, "Service"), CommonItem(1, "WebView")))
     }
 
     private fun navigate(title: String) {
         when (title) {
             "Service" -> findNavController().navigate(ExamplesFragmentDirections.actionExampleFragmentToServiceFragment())
+            "WebView" -> findNavController().navigate(ExamplesFragmentDirections.actionExampleFragmentToWebViewFragment())
         }
     }
 }

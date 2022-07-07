@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/exampleFragment">
 
     <!--<include app:graph="@navigation/home_nav_graph" />-->
 
@@ -36,6 +36,9 @@
         <action
             android:id="@+id/action_exampleFragment_to_serviceFragment"
             app:destination="@id/serviceFragment" />
+        <action
+            android:id="@+id/action_exampleFragment_to_webViewFragment"
+            app:destination="@id/webViewFragment" />
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
@@ -46,5 +49,10 @@
         android:id="@+id/serviceFragment"
         android:name="com.san.archapp.ui.examples.service.ServiceFragment"
         android:label="ServiceFragment" />
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="com.san.archapp.ui.examples.webview.WebViewFragment"
+        android:label="fragment_web_view"
+        tools:layout="@layout/fragment_web_view" />
 
 </navigation>

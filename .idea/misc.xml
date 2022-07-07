@@ -3,24 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/san/Others/Tasks/ArchApp/app/src/main/res/layout/custom_notification_view.xml" value="0.2421875" />
-        <entry key="..\:/san/Others/Tasks/ArchApp/app/src/main/res/layout/fragment_account.xml" value="0.5" />
-        <entry key="..\:/san/Others/Tasks/ArchApp/app/src/main/res/layout/fragment_examples.xml" value="0.2421875" />
-        <entry key="..\:/san/Others/Tasks/ArchApp/app/src/main/res/layout/fragment_service.xml" value="0.25" />
-        <entry key="..\:/san/Others/Tasks/ArchApp/app/src/main/res/layout/item_list.xml" value="0.2421875" />
-        <entry key="..\:/san/Others/Tasks/ArchApp/app/src/main/res/layout/item_user.xml" value="0.2421875" />
-        <entry key="..\:/san/Others/Tasks/ArchApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2421875" />
-        <entry key="..\:/san/Others/Tasks/CP/app/src/main/res/drawable/shape_circle.xml" value="0.1" />
-        <entry key="..\:/san/Others/Tasks/CP/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/san/Others/Tasks/CP/app/src/main/res/layout/fragment_account.xml" value="0.2421875" />
-        <entry key="..\:/san/Others/Tasks/CP/app/src/main/res/layout/fragment_comment.xml" value="0.2421875" />
-        <entry key="..\:/san/Others/Tasks/CP/app/src/main/res/layout/fragment_home.xml" value="0.25" />
-        <entry key="..\:/san/Others/Tasks/CP/app/src/main/res/layout/fragment_settings.xml" value="0.2421875" />
-        <entry key="..\:/san/Others/Tasks/CP/app/src/main/res/layout/fragment_user.xml" value="0.2421875" />
-        <entry key="..\:/san/Others/Tasks/CP/app/src/main/res/layout/item_user.xml" value="0.22" />
-        <entry key="..\:/san/Others/Tasks/CP/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2421875" />
+        <entry key="..\:/San/Personal-Projects/Android-Arch-App/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/San/Personal-Projects/Android-Arch-App/app/src/main/res/layout/fragment_web_view.xml" value="0.14130434782608695" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
 </project>
