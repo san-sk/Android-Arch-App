@@ -9,6 +9,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.webkit.*
+import android.widget.Toolbar
+import androidx.activity.OnBackPressedCallback
 import androidx.core.content.ContextCompat.startActivity
 import androidx.fragment.app.Fragment
 import androidx.webkit.WebViewAssetLoader
@@ -63,13 +65,13 @@ class WebViewFragment : Fragment(R.layout.fragment_web_view) {
 
 
     //Local content - requires webkit dependency
-    private val assetLoader = WebViewAssetLoader.Builder()
+    /*private val assetLoader = WebViewAssetLoader.Builder()
         .addPathHandler("/assets/", WebViewAssetLoader.AssetsPathHandler(requireContext()))
         .addPathHandler("/res/", WebViewAssetLoader.ResourcesPathHandler(requireContext()))
         .build()
 
 
-    private val localWebViewClient by lazy { LocalContentWebViewClient(assetLoader) }
+    private val localWebViewClient by lazy { LocalContentWebViewClient(assetLoader) }*/
 
 
     override fun onCreateView(
@@ -97,6 +99,14 @@ class WebViewFragment : Fragment(R.layout.fragment_web_view) {
                 domStorageEnabled = true
             }
         }.loadUrl("https://www.verizon.com" ?: LocalContentWebViewURL)
+
+        activity?.onBackPressedDispatcher?.addCallback(
+            viewLifecycleOwner,
+            object : OnBackPressedCallback(true) {
+                override fun handleOnBackPressed() {
+                    if (binding.wvHome.canGoBack()) binding.wvHome.goBack()
+                }
+            })
     }
 
 
@@ -133,5 +143,6 @@ class WebViewFragment : Fragment(R.layout.fragment_web_view) {
             return assetLoader.shouldInterceptRequest(Uri.parse(url))
         }
     }
+
 
 }
