@@ -41,6 +41,7 @@ class ExamplesFragment : Fragment(R.layout.fragment_examples) {
         when (title) {
             "Service" -> findNavController().navigate(ExamplesFragmentDirections.actionExampleFragmentToServiceFragment())
             "WebView" -> findNavController().navigate(ExamplesFragmentDirections.actionExampleFragmentToWebViewFragment())
+            "CustomView" -> findNavController().navigate(ExamplesFragmentDirections.actionExampleFragmentToWebViewFragment())
         }
     }
 }

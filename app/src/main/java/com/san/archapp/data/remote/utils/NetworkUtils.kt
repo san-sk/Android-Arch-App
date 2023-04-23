@@ -25,3 +25,18 @@ import kotlinx.coroutines.flow.*
 
     emitAll(flow)
 }
+
+
+fun <ResultType> networkOnlyResource(
+    fetch: suspend () -> ResultType
+) = flow {
+    val flow = flow {
+        emit(Resource.Loading(null))
+        try {
+            emit(Resource.Success(fetch()))
+        } catch (throwable: Throwable) {
+            emit(Resource.Error(throwable, null))
+        }
+    }
+    emitAll(flow)
+}

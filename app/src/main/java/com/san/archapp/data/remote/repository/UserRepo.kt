@@ -3,12 +3,13 @@ package com.san.archapp.data.remote.repository
 import com.san.archapp.data.local.UserDao
 import com.san.archapp.data.remote.api.BaseApi
 import com.san.archapp.data.remote.utils.networkBoundResource
+import com.san.archapp.data.remote.utils.networkOnlyResource
 import javax.inject.Inject
 
 class UserRepo @Inject constructor(private val api: BaseApi, private val userDao: UserDao) {
 
 
-    suspend fun getUsers() = networkBoundResource(
+     fun getUsers() = networkBoundResource(
 
         // Query to return the list of all cars
         query = {
@@ -34,6 +35,13 @@ class UserRepo @Inject constructor(private val api: BaseApi, private val userDao
         }
 
     )
+
+    fun getUsers2() = networkOnlyResource { api.getUsers() }
+
+
+    fun getUsers3(){
+
+    }
 
 
     fun getComment(id: Int) = userDao.getComment(id)

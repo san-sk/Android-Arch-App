@@ -6,7 +6,6 @@ import androidx.lifecycle.viewModelScope
 import com.san.archapp.data.entity.Data
 import com.san.archapp.data.remote.repository.UserRepo
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -23,7 +22,7 @@ class HomeViewModel @Inject constructor(private val repo: UserRepo) : ViewModel(
         }
     }
 
-    private suspend fun getUsers() = repo.getUsers()
+    private fun getUsers() = repo.getUsers()
 
     suspend fun insertComment(id: Int, comment: String) = repo.insertComment(id, comment)
 

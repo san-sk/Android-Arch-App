@@ -16,12 +16,17 @@ import com.san.archapp.databinding.FragmentServiceBinding
 import com.san.archapp.utils.showToast
 
 
-class ServiceFragment : Fragment(R.layout.fragment_service) {
+class ServiceFragment() : Fragment() {
 
     private lateinit var binding: FragmentServiceBinding
 
     private var bServiceConnection: BindServiceConnection? = null
 
+    private lateinit var a: String
+
+    constructor(a:Int) : this() {
+        this.a = a.toString()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
